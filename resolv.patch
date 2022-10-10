@@ -1,5 +1,5 @@
 diff --git a/src/network/resolvconf.c b/src/network/resolvconf.c
-index 7bda484..0602755 100644
+index 7bda484..4656432 100644
 --- a/src/network/resolvconf.c
 +++ b/src/network/resolvconf.c
 @@ -18,7 +18,7 @@ int __get_resolv_conf(struct resolvconf *conf, char *search, size_t search_sz)
@@ -7,7 +7,7 @@ index 7bda484..0602755 100644
  	if (search) *search = 0;
  
 -	f = __fopen_rb_ca("/etc/resolv.conf", &_f, _buf, sizeof _buf);
-+	f = __fopen_rb_ca("/tmp/resolv.conf", &_f, _buf, sizeof _buf);
++	f = __fopen_rb_ca("/data/local/tmp/resolv.conf", &_f, _buf, sizeof _buf);
  	if (!f) switch (errno) {
  	case ENOENT:
  	case ENOTDIR:
