@@ -27,7 +27,7 @@ jobs:
       matrix:
         name: [musl-cross-make]
         os_id: [alpine]
-        os_version_id: [edge]
+        os_version_id: [3.16]
         arch_type:
           [
             armv7l-linux-musleabihf
